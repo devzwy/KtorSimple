@@ -1,0 +1,23 @@
+POST http://0.0.0.0:8080/login/a1
+Content-Type: application/json
+
+{
+  "a": "AAAAA"
+}
+
+> {%
+ client.global.set("token",response.body.token);
+ %}
+
+###
+
+
+POST http://0.0.0.0:8080/login
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "aaa": "11111"
+}
+
+###

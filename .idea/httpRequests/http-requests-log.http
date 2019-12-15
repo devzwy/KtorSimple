@@ -1,0 +1,493 @@
+POST http://0.0.0.0:8080/login/a1
+Content-Type: application/json
+
+{
+  "a": "AAAAA"
+}
+
+###
+
+POST http://0.0.0.0:8080/login
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQUFBQUEifQ.3rVn5WkLlAPesW1oWPRnauouJ8SlYzewTLupOuy1UvQ
+
+{
+  "aaa": "11111"
+}
+
+<> 2019-12-15T060055.401.json
+
+###
+
+POST http://0.0.0.0:8080/login
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQUFBQUEifQ.3rVn5WkLlAPesW1oWPRnauouJ8SlYzewTLupOuy1UvQ
+
+{
+  "aaa": "11111"
+}
+
+<> 2019-12-15T060048.401.json
+
+###
+
+POST http://0.0.0.0:8080/login/a
+Content-Type: application/json
+
+{
+  "a": "AAAAA"
+}
+
+<> 2019-12-15T060047.200.json
+
+###
+
+POST http://0.0.0.0:8080/login
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQUFBQUEifQ.3rVn5WkLlAPesW1oWPRnauouJ8SlYzewTLupOuy1UvQ
+
+{
+  "aaa": "11111"
+}
+
+###
+
+POST http://0.0.0.0:8080/login/a
+Content-Type: application/json
+
+{
+  "a": "AAAAA"
+}
+
+<> 2019-12-15T055932.200.json
+
+###
+
+POST http://0.0.0.0:8080/login
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQUFBQUEifQ.3rVn5WkLlAPesW1oWPRnauouJ8SlYzewTLupOuy1UvQ
+
+{
+  "aaa": "11111"
+}
+
+###
+
+POST http://0.0.0.0:8080/login
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQUFBQUEifQ.3rVn5WkLlAPesW1oWPRnauouJ8SlYzewTLupOuy1UvQ
+
+{
+  "aaa": "11111"
+}
+
+###
+
+POST http://0.0.0.0:8080/login/a
+Content-Type: application/json
+
+{
+  "a": "AAAAA"
+}
+
+<> 2019-12-15T055741.200.json
+
+###
+
+POST http://0.0.0.0:8080/login
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQUFBQUEifQ.3rVn5WkLlAPesW1oWPRnauouJ8SlYzewTLupOuy1UvQ
+
+{
+  "aaa": "11111"
+}
+
+###
+
+POST http://0.0.0.0:8080/login/a
+Content-Type: application/json
+
+{
+  "a": "AAAAA"
+}
+
+<> 2019-12-15T055634.200.json
+
+###
+
+POST http://0.0.0.0:8080/login
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQUFBQUEifQ.3rVn5WkLlAPesW1oWPRnauouJ8SlYzewTLupOuy1UvQ
+
+{
+  "aaa": "11111"
+}
+
+###
+
+POST http://0.0.0.0:8080/login/a
+Content-Type: application/json
+
+{
+  "a": "AAAAA"
+}
+
+<> 2019-12-15T055510.200.json
+
+###
+
+POST http://0.0.0.0:8080/login
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQUFBQUEifQ.3rVn5WkLlAPesW1oWPRnauouJ8SlYzewTLupOuy1UvQ
+
+{
+  "aaa":"11111"
+}
+
+<> 2019-12-15T054902.200.json
+
+###
+
+POST http://0.0.0.0:8080/login/a
+Content-Type: application/json
+
+{
+"a": "AAAAA"
+}
+
+<> 2019-12-15T054859.200.json
+
+###
+
+POST http://0.0.0.0:8080/login
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5rWL6K-V55So5oi3In0.0GYM9oOl1DDWy7JZ5MjLDStm8FLEVriKcr-pGK6a_To
+
+{
+  "aaa":"11111"
+}
+
+<> 2019-12-15T054807.200.json
+
+###
+
+POST http://0.0.0.0:8080/login/a
+Content-Type: application/json
+
+{
+
+}
+
+<> 2019-12-15T054802.200.json
+
+###
+
+POST http://0.0.0.0:8080/login/a
+Content-Type: application/json
+
+{
+
+}
+
+###
+
+POST http://0.0.0.0:8080/login/a
+Content-Type: application/json
+
+{
+
+}
+
+<> 2019-12-15T053528.401.json
+
+###
+
+POST http://0.0.0.0:8080/login
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5rWL6K-V55So5oi3In0.0GYM9oOl1DDWy7JZ5MjLDStm8FLEVriKcr-pGK6a_To
+
+{
+  "aaa":"11111"
+}
+
+<> 2019-12-15T053044.200.json
+
+###
+
+POST http://0.0.0.0:8080/login/a
+Content-Type: application/json
+
+{
+
+}
+
+<> 2019-12-15T053036.200.json
+
+###
+
+POST http://0.0.0.0:8080/login/a
+Content-Type: application/json
+
+{
+
+}
+
+###
+
+POST http://0.0.0.0:8080/login/a
+Content-Type: application/json
+
+{
+  "a": "张三"
+}
+
+<> 2019-12-15T052950.200.json
+
+###
+
+POST http://0.0.0.0:8080/login/a
+Content-Type: application/json
+
+{
+  "a": "张三","b": 100
+}
+
+<> 2019-12-15T052942.200.json
+
+###
+
+POST http://0.0.0.0:8080/login
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5byg5LiJIn0.MhG-f4U2VT5c4XWH00YxmsbmbBYNz4KypPl_K-qcK-8
+
+{
+  "aaa":"11111"
+}
+
+<> 2019-12-15T052839.200.json
+
+###
+
+POST http://0.0.0.0:8080/login/a
+Content-Type: application/json
+
+{
+  "a": "张三","b": 100
+}
+
+<> 2019-12-15T052836.200.json
+
+###
+
+POST http://0.0.0.0:8080/login
+Content-Type: application/json
+
+{
+  "a": "张三","b": 100
+}
+
+###
+
+GET http://0.0.0.0:8080/login
+Content-Type: application/json
+
+{
+  "a": "张三","b": 100
+}
+
+###
+
+GET http://0.0.0.0:8080/login
+Content-Type: application/json
+
+{
+  "a": "张三","b": 100
+}
+
+###
+
+GET http://0.0.0.0:8080/login
+Content-Type: application/json
+
+{
+  "a": "张三","b": 100
+}
+
+###
+
+GET http://0.0.0.0:8080/login
+Content-Type: application/json
+
+{
+  "a": "张三","b": 100
+}
+
+###
+
+GET http://0.0.0.0:8080/login
+Content-Type: application/json
+
+{
+  "a": "张三"
+}
+
+###
+
+GET http://0.0.0.0:8080/login
+Content-Type: application/json
+
+{}
+
+###
+
+POST http://0.0.0.0:8080/login
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoidXNlcjEifQ._fbiaEzQSfuhknOEbDvRwuLheQtIgHFKk_UlMFJifIc
+
+{
+  "aaa":"11111"
+}
+
+<> 2019-12-15T051652.200.json
+
+###
+
+GET http://0.0.0.0:8080/login
+Content-Type: application/json
+
+{}
+
+<> 2019-12-15T051648.200.json
+
+###
+
+POST http://0.0.0.0:8080/login
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoidXNlcjEifQ._fbiaEzQSfuhknOEbDvRwuLheQtIgHFKk_UlMFJifIc
+
+{
+  "aaa":"11111"
+}
+
+###
+
+POST http://0.0.0.0:8080/login
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoidXNlcjEifQ._fbiaEzQSfuhknOEbDvRwuLheQtIgHFKk_UlMFJifIc
+
+{}
+
+###
+
+GET http://0.0.0.0:8080/login
+Content-Type: application/json
+
+{}
+
+<> 2019-12-15T051348.200.json
+
+###
+
+POST http://0.0.0.0:8080/login
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoidXNlcjEifQ._fbiaEzQSfuhknOEbDvRwuLheQtIgHFKk_UlMFJifIc
+
+{}
+
+###
+
+GET http://0.0.0.0:8080/login
+Content-Type: application/json
+
+{}
+
+<> 2019-12-15T050710.200.json
+
+###
+
+POST http://0.0.0.0:8080/login
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoidXNlcjEifQ._fbiaEzQSfuhknOEbDvRwuLheQtIgHFKk_UlMFJifIc
+
+{}
+
+###
+
+GET http://0.0.0.0:8080/login
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoidXNlcjEifQ._fbiaEzQSfuhknOEbDvRwuLheQtIgHFKk_UlMFJifIc
+
+{}
+
+<> 2019-12-15T050648.200.json
+
+###
+
+POST http://0.0.0.0:8080/login
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoidXNlcjEifQ._fbiaEzQSfuhknOEbDvRwuLheQtIgHFKk_UlMFJifIc
+
+{}
+
+###
+
+POST http://0.0.0.0:8080/login
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoidXNlcjEifQ._fbiaEzQSfuhknOEbDvRwuLheQtIgHFKk_UlMFJifIc
+
+{}
+
+###
+
+GET http://0.0.0.0:8080/login
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoidXNlcjEifQ._fbiaEzQSfuhknOEbDvRwuLheQtIgHFKk_UlMFJifIc
+
+{}
+
+<> 2019-12-15T050615.200.json
+
+###
+
+GET http://0.0.0.0:8080/login
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoidXNlcjEifQ._fbiaEzQSfuhknOEbDvRwuLheQtIgHFKk_UlMFJifIc
+
+{}
+
+<> 2019-12-15T050234.200.json
+
+###
+
+GET http://0.0.0.0:8080/login
+Content-Type: application/json
+
+{}
+
+<> 2019-12-15T050217.200.json
+
+###
+
+POST http://0.0.0.0:8080/login
+Content-Type: application/json
+
+{}
+
+###
+
+POST http://0.0.0.0:8080/login
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoidXNlcjEifQ._fbiaEzQSfuhknOEbDvRwuLheQtIgHFKk_UlMFJifIc
+
+{}
+
+###
+
+POST http://0.0.0.0:8080/login
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoidXNlcjEifQ._fbiaEzQSfuhknOEbDvRwuLheQtIgHFKk_UlMFJifIc
+
+{}
+
+###
+

@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_example.main" default="compile.module.example.main">
+  <dirname property="module.example.main.basedir" file="${ant.file.module_example.main}"/>
+  
+  <property name="module.jdk.home.example.main" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.example.main" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.example.main" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.example.main" value="-encoding UTF-8 -source 8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="example.main.output.dir" value="${module.example.main.basedir}/../../build/classes/java/main"/>
+  <property name="example.main.testoutput.dir" value="${module.example.main.basedir}/../../build/classes/java/main"/>
+  
+  <path id="example.main.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="example.main.module.production.classpath">
+    <path refid="${module.jdk.classpath.example.main}"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-netty:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-html-builder:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-thymeleaf:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-host-common:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-auth-jwt:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-auth:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-gson:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-core:1.2.6.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:kotlin-css-jvm:1.0.0-pre.31-kotlin-1.2.41.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-client-core-jvm:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http-cio-jvm:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http-jvm:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-network:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-utils-jvm:1.2.6.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.60.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-classic:1.2.1.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-client-core:1.2.6.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-io-jvm:0.1.16.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-io-jvm:0.1.16.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http-cio:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-utils:1.2.6.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:atomicfu:0.14.1.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-reflect:1.3.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-html-jvm:0.6.12.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.3.2-1.3.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2-1.3.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib:1.3.60.classpath"/>
+    <path refid="library.gradle:_org.thymeleaf:thymeleaf:3.0.11.release.classpath"/>
+    <path refid="library.gradle:_org.slf4j:slf4j-api:1.7.26.classpath"/>
+    <path refid="library.gradle:_com.typesafe:config:1.3.1.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec-http2:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_org.eclipse.jetty.alpn:alpn-api:1.1.3.v20160715.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-kqueue:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-epoll:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-core:1.2.1.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:kotlin-css:1.0.0-pre.31-kotlin-1.2.41.classpath"/>
+    <path refid="library.gradle:_com.googlecode.json-simple:json-simple:1.1.1.classpath"/>
+    <path refid="library.gradle:_com.auth0:java-jwt:3.4.1.classpath"/>
+    <path refid="library.gradle:_com.auth0:jwks-rsa:0.7.0.classpath"/>
+    <path refid="library.gradle:_com.google.code.gson:gson:2.8.5.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-io:0.1.16.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core-common:1.3.2-1.3.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-io:0.1.16.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:annotations:13.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:atomicfu-common:0.14.1.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec-http:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-handler:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-unix-common:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-buffer:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-resolver:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-common:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_ognl:ognl:3.1.12.classpath"/>
+    <path refid="library.gradle:_org.attoparser:attoparser:2.0.5.release.classpath"/>
+    <path refid="library.gradle:_org.unbescape:unbescape:1.1.6.release.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-databind:2.9.8.classpath"/>
+    <path refid="library.gradle:_commons-codec:commons-codec:1.11.classpath"/>
+    <path refid="library.gradle:_commons-io:commons-io:2.6.classpath"/>
+    <path refid="library.gradle:_com.google.guava:guava:27.0-jre.classpath"/>
+    <path refid="library.gradle:_org.javassist:javassist:3.20.0-ga.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-annotations:2.9.0.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-core:2.9.8.classpath"/>
+    <path refid="library.gradle:_com.google.guava:failureaccess:1.0.classpath"/>
+    <path refid="library.gradle:_com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava.classpath"/>
+    <path refid="library.gradle:_com.google.code.findbugs:jsr305:3.0.2.classpath"/>
+    <path refid="library.gradle:_org.checkerframework:checker-qual:2.5.2.classpath"/>
+    <path refid="library.gradle:_com.google.errorprone:error_prone_annotations:2.2.0.classpath"/>
+    <path refid="library.gradle:_com.google.j2objc:j2objc-annotations:1.1.classpath"/>
+    <path refid="library.gradle:_org.codehaus.mojo:animal-sniffer-annotations:1.17.classpath"/>
+  </path>
+  
+  <path id="example.main.runtime.production.module.classpath">
+    <pathelement location="${example.main.output.dir}"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-netty:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-html-builder:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-thymeleaf:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-host-common:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-auth-jwt:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-auth:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-gson:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-core:1.2.6.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:kotlin-css-jvm:1.0.0-pre.31-kotlin-1.2.41.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-client-core-jvm:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http-cio-jvm:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http-jvm:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-network:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-utils-jvm:1.2.6.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.60.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-classic:1.2.1.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-client-core:1.2.6.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-io-jvm:0.1.16.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-io-jvm:0.1.16.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http-cio:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-utils:1.2.6.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:atomicfu:0.14.1.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-reflect:1.3.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-html-jvm:0.6.12.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.3.2-1.3.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2-1.3.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib:1.3.60.classpath"/>
+    <path refid="library.gradle:_org.thymeleaf:thymeleaf:3.0.11.release.classpath"/>
+    <path refid="library.gradle:_org.slf4j:slf4j-api:1.7.26.classpath"/>
+    <path refid="library.gradle:_com.typesafe:config:1.3.1.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec-http2:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_org.eclipse.jetty.alpn:alpn-api:1.1.3.v20160715.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-kqueue:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-epoll:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-core:1.2.1.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:kotlin-css:1.0.0-pre.31-kotlin-1.2.41.classpath"/>
+    <path refid="library.gradle:_com.googlecode.json-simple:json-simple:1.1.1.classpath"/>
+    <path refid="library.gradle:_com.auth0:java-jwt:3.4.1.classpath"/>
+    <path refid="library.gradle:_com.auth0:jwks-rsa:0.7.0.classpath"/>
+    <path refid="library.gradle:_com.google.code.gson:gson:2.8.5.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-io:0.1.16.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core-common:1.3.2-1.3.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-io:0.1.16.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:annotations:13.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:atomicfu-common:0.14.1.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec-http:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-handler:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-unix-common:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-buffer:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-resolver:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-common:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_ognl:ognl:3.1.12.classpath"/>
+    <path refid="library.gradle:_org.attoparser:attoparser:2.0.5.release.classpath"/>
+    <path refid="library.gradle:_org.unbescape:unbescape:1.1.6.release.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-databind:2.9.8.classpath"/>
+    <path refid="library.gradle:_commons-codec:commons-codec:1.11.classpath"/>
+    <path refid="library.gradle:_commons-io:commons-io:2.6.classpath"/>
+    <path refid="library.gradle:_com.google.guava:guava:27.0-jre.classpath"/>
+    <path refid="library.gradle:_org.javassist:javassist:3.20.0-ga.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-annotations:2.9.0.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-core:2.9.8.classpath"/>
+    <path refid="library.gradle:_com.google.guava:failureaccess:1.0.classpath"/>
+    <path refid="library.gradle:_com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava.classpath"/>
+    <path refid="library.gradle:_com.google.code.findbugs:jsr305:3.0.2.classpath"/>
+    <path refid="library.gradle:_org.checkerframework:checker-qual:2.5.2.classpath"/>
+    <path refid="library.gradle:_com.google.errorprone:error_prone_annotations:2.2.0.classpath"/>
+    <path refid="library.gradle:_com.google.j2objc:j2objc-annotations:1.1.classpath"/>
+    <path refid="library.gradle:_org.codehaus.mojo:animal-sniffer-annotations:1.17.classpath"/>
+  </path>
+  
+  <path id="example.main.module.classpath">
+    <path refid="${module.jdk.classpath.example.main}"/>
+    <pathelement location="${example.main.output.dir}"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-netty:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-html-builder:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-thymeleaf:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-host-common:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-auth-jwt:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-auth:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-gson:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-core:1.2.6.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:kotlin-css-jvm:1.0.0-pre.31-kotlin-1.2.41.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-client-core-jvm:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http-cio-jvm:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http-jvm:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-network:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-utils-jvm:1.2.6.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.60.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-classic:1.2.1.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-client-core:1.2.6.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-io-jvm:0.1.16.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-io-jvm:0.1.16.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http-cio:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-utils:1.2.6.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:atomicfu:0.14.1.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-reflect:1.3.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-html-jvm:0.6.12.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.3.2-1.3.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2-1.3.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib:1.3.60.classpath"/>
+    <path refid="library.gradle:_org.thymeleaf:thymeleaf:3.0.11.release.classpath"/>
+    <path refid="library.gradle:_org.slf4j:slf4j-api:1.7.26.classpath"/>
+    <path refid="library.gradle:_com.typesafe:config:1.3.1.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec-http2:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_org.eclipse.jetty.alpn:alpn-api:1.1.3.v20160715.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-kqueue:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-epoll:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-core:1.2.1.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:kotlin-css:1.0.0-pre.31-kotlin-1.2.41.classpath"/>
+    <path refid="library.gradle:_com.googlecode.json-simple:json-simple:1.1.1.classpath"/>
+    <path refid="library.gradle:_com.auth0:java-jwt:3.4.1.classpath"/>
+    <path refid="library.gradle:_com.auth0:jwks-rsa:0.7.0.classpath"/>
+    <path refid="library.gradle:_com.google.code.gson:gson:2.8.5.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-io:0.1.16.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core-common:1.3.2-1.3.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-io:0.1.16.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:annotations:13.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:atomicfu-common:0.14.1.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec-http:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-handler:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-unix-common:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-buffer:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-resolver:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-common:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_ognl:ognl:3.1.12.classpath"/>
+    <path refid="library.gradle:_org.attoparser:attoparser:2.0.5.release.classpath"/>
+    <path refid="library.gradle:_org.unbescape:unbescape:1.1.6.release.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-databind:2.9.8.classpath"/>
+    <path refid="library.gradle:_commons-codec:commons-codec:1.11.classpath"/>
+    <path refid="library.gradle:_commons-io:commons-io:2.6.classpath"/>
+    <path refid="library.gradle:_com.google.guava:guava:27.0-jre.classpath"/>
+    <path refid="library.gradle:_org.javassist:javassist:3.20.0-ga.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-annotations:2.9.0.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-core:2.9.8.classpath"/>
+    <path refid="library.gradle:_com.google.guava:failureaccess:1.0.classpath"/>
+    <path refid="library.gradle:_com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava.classpath"/>
+    <path refid="library.gradle:_com.google.code.findbugs:jsr305:3.0.2.classpath"/>
+    <path refid="library.gradle:_org.checkerframework:checker-qual:2.5.2.classpath"/>
+    <path refid="library.gradle:_com.google.errorprone:error_prone_annotations:2.2.0.classpath"/>
+    <path refid="library.gradle:_com.google.j2objc:j2objc-annotations:1.1.classpath"/>
+    <path refid="library.gradle:_org.codehaus.mojo:animal-sniffer-annotations:1.17.classpath"/>
+  </path>
+  
+  <path id="example.main.runtime.module.classpath">
+    <pathelement location="${example.main.output.dir}"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-netty:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-html-builder:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-thymeleaf:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-host-common:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-auth-jwt:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-auth:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-gson:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-core:1.2.6.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:kotlin-css-jvm:1.0.0-pre.31-kotlin-1.2.41.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-client-core-jvm:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http-cio-jvm:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http-jvm:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-network:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-utils-jvm:1.2.6.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.60.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-classic:1.2.1.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-client-core:1.2.6.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-io-jvm:0.1.16.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-io-jvm:0.1.16.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http-cio:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http:1.2.6.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-utils:1.2.6.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:atomicfu:0.14.1.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-reflect:1.3.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-html-jvm:0.6.12.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.3.2-1.3.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2-1.3.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib:1.3.60.classpath"/>
+    <path refid="library.gradle:_org.thymeleaf:thymeleaf:3.0.11.release.classpath"/>
+    <path refid="library.gradle:_org.slf4j:slf4j-api:1.7.26.classpath"/>
+    <path refid="library.gradle:_com.typesafe:config:1.3.1.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec-http2:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_org.eclipse.jetty.alpn:alpn-api:1.1.3.v20160715.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-kqueue:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-epoll:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-core:1.2.1.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:kotlin-css:1.0.0-pre.31-kotlin-1.2.41.classpath"/>
+    <path refid="library.gradle:_com.googlecode.json-simple:json-simple:1.1.1.classpath"/>
+    <path refid="library.gradle:_com.auth0:java-jwt:3.4.1.classpath"/>
+    <path refid="library.gradle:_com.auth0:jwks-rsa:0.7.0.classpath"/>
+    <path refid="library.gradle:_com.google.code.gson:gson:2.8.5.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-io:0.1.16.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core-common:1.3.2-1.3.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-io:0.1.16.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.60.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:annotations:13.0.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:atomicfu-common:0.14.1.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec-http:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-handler:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-unix-common:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-buffer:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-resolver:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-common:4.1.37.final.classpath"/>
+    <path refid="library.gradle:_ognl:ognl:3.1.12.classpath"/>
+    <path refid="library.gradle:_org.attoparser:attoparser:2.0.5.release.classpath"/>
+    <path refid="library.gradle:_org.unbescape:unbescape:1.1.6.release.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-databind:2.9.8.classpath"/>
+    <path refid="library.gradle:_commons-codec:commons-codec:1.11.classpath"/>
+    <path refid="library.gradle:_commons-io:commons-io:2.6.classpath"/>
+    <path refid="library.gradle:_com.google.guava:guava:27.0-jre.classpath"/>
+    <path refid="library.gradle:_org.javassist:javassist:3.20.0-ga.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-annotations:2.9.0.classpath"/>
+    <path refid="library.gradle:_com.fasterxml.jackson.core:jackson-core:2.9.8.classpath"/>
+    <path refid="library.gradle:_com.google.guava:failureaccess:1.0.classpath"/>
+    <path refid="library.gradle:_com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava.classpath"/>
+    <path refid="library.gradle:_com.google.code.findbugs:jsr305:3.0.2.classpath"/>
+    <path refid="library.gradle:_org.checkerframework:checker-qual:2.5.2.classpath"/>
+    <path refid="library.gradle:_com.google.errorprone:error_prone_annotations:2.2.0.classpath"/>
+    <path refid="library.gradle:_com.google.j2objc:j2objc-annotations:1.1.classpath"/>
+    <path refid="library.gradle:_org.codehaus.mojo:animal-sniffer-annotations:1.17.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.example.main">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.example.main">
+    <patternset refid="excluded.from.module.example.main"/>
+  </patternset>
+  
+  <path id="example.main.module.sourcepath">
+    <dirset dir="${module.example.main.basedir}/../../../untitled1">
+      <include name="resources"/>
+    </dirset>
+    <dirset dir="${module.example.main.basedir}/../../../untitled1">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.example.main" depends="compile.module.example.main.production,compile.module.example.main.tests" description="Compile module example.main"/>
+  
+  <target name="compile.module.example.main.production" depends="register.custom.compilers" description="Compile module example.main; production classes">
+    <mkdir dir="${example.main.output.dir}"/>
+    <javac2 destdir="${example.main.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.example.main}/javac">
+      <compilerarg line="${compiler.args.example.main}"/>
+      <bootclasspath refid="example.main.module.bootclasspath"/>
+      <classpath refid="example.main.module.production.classpath"/>
+      <src refid="example.main.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.example.main"/>
+    </javac2>
+    
+    <copy todir="${example.main.output.dir}">
+      <fileset dir="${module.example.main.basedir}/../../resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.example.main.basedir}/../../src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.example.main.tests" depends="register.custom.compilers,compile.module.example.main.production" description="compile module example.main; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.example.main" description="cleanup module">
+    <delete dir="${example.main.output.dir}"/>
+    <delete dir="${example.main.testoutput.dir}"/>
+  </target>
+</project>
